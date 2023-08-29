@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles.css */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Add other styles for the fixed navigation bar */
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

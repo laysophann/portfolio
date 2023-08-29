@@ -8,7 +8,7 @@ function NightSkyBackground() {
 
   useEffect(() => {
     scene.current = new THREE.Scene();
-    scene.current.background = new THREE.Color(0x000000);
+    scene.current.background = new THREE.Color(0x00000f);
 
     const camera = new THREE.PerspectiveCamera(
       75,
