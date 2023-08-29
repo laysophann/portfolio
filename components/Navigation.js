@@ -6,7 +6,7 @@ function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsNavFixed(window.scrollY > 100); // Adjust the scroll threshold as needed
+      setIsNavFixed(window.scrollY > 50); // Adjust the scroll threshold as needed
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -22,13 +22,13 @@ function Navigation() {
     >
       <h1 className="font-bold text-5xl text-lime-500">.SP.</h1>
       <ul className="flex space-x-10 text-lg">
-        <li>
+        <li className="hover:text-lime-500">
           <a href="#about">About</a>
         </li>
-        <li>
+        <li className="hover:text-lime-500">
           <a href="#skills">Skills</a>
         </li>
-        <li>
+        <li className="hover:text-lime-500">
           <a href="#contact">Contact</a>
         </li>
       </ul>
