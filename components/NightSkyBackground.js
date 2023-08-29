@@ -1,20 +1,30 @@
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 function NightSkyBackground() {
   const sceneRef = useRef(null);
   const animationFrameIDRef = useRef(null);
+  const scene = useRef(null); // Maintain a reference to the scene
 
   useEffect(() => {
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    scene.current = new THREE.Scene();
+    scene.current.background = new THREE.Color(0x000000);
+
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     sceneRef.current.appendChild(renderer.domElement);
 
     const starsGeometry = new THREE.BufferGeometry();
-    const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.02 });
+    const starsMaterial = new THREE.PointsMaterial({
+      color: 0xffffff,
+      size: 0.02,
+    });
     const starsVertices = [];
 
     for (let i = 0; i < 1000; i++) {
@@ -24,30 +34,42 @@ function NightSkyBackground() {
       starsVertices.push(x, y, z);
     }
 
-    starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+    starsGeometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(starsVertices, 3)
+    );
     const stars = new THREE.Points(starsGeometry, starsMaterial);
-    scene.add(stars);
+    scene.current.add(stars);
 
     camera.position.z = 5;
 
-    const animate = () => {
-      scene.rotation.x += 0.001;
-      scene.rotation.y += 0.001;
+    const handleWindowResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
 
-      renderer.render(scene, camera);
+    const animate = () => {
+      // Update rotation values here
+      scene.current.rotation.x += 0.001;
+      scene.current.rotation.y += 0.001;
+
+      renderer.render(scene.current, camera);
       animationFrameIDRef.current = requestAnimationFrame(animate);
     };
 
+    window.addEventListener("resize", handleWindowResize);
     animate();
 
     return () => {
+      window.removeEventListener("resize", handleWindowResize);
       cancelAnimationFrame(animationFrameIDRef.current);
-      scene.remove(stars);
+      scene.current.remove(stars);
       renderer.dispose();
     };
   }, []);
 
-  return <div className='night-sky-background' ref={sceneRef} />;
+  return <div className="night-sky-background" ref={sceneRef} />;
 }
 
 export default NightSkyBackground;
