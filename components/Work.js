@@ -22,7 +22,7 @@ const experiences = [
     date: "2022 - Present",
     title: "Frontend Developer",
     company_name: "TechCo",
-    icon: "/icons/frontend-icon.png",
+    icon: "/icons/facebook.png",
     iconBg: "#1d1836",
     points: [
       "Developed and maintained responsive web applications using React.",
