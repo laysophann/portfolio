@@ -16,7 +16,7 @@ function Contact() {
         <h2 className="text-3xl font-bold text-white mb-6">Connect Me ()</h2>
         <p className="text-lg text-gray-400 mb-10 mx-3">
           Want to get in touch? Feel free to reach out to me via email or connect with me
-          on social media. I'm always excited to collaborate on new projects and
+          on social media. I am always excited to collaborate on new projects and
           opportunities!
         </p>
         <div className="flex flex-wrap justify-center items-center gap-x-4">
