@@ -2,6 +2,7 @@
 import NightSkyBackground from "../components/NightSkyBackground";
 import Navigation from "../components/Navigation";
 import About from "../components/About";
+import Work from "../components/Work";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <Navigation />
       </div>
       <About />
+      <Work />
       <Skills />
       <Contact />
     </div>
