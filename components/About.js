@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
   return (
     <section id="about" className="py-20 font-mono">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center p-4">
         <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
         <p className="text-lg text-gray-400 mb-10">
           Hi there! I'm Lay Sophann, a passionate frontend development with a love for creating
