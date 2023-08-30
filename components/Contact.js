@@ -1,31 +1,40 @@
-import React from 'react';
+import React from "react";
+
+const skillsData = [
+  { title: "Email", icon: "email.png", link: "https://mail.google.com/mail/u/1/#inbox" },
+  { title: "Linkedin", icon: "linkedin.png", link: "https://www.linkedin.com/in/lay-sophann-7750b8205/" },
+  { title: "Twitter", icon: "twitter.png", link: "https://twitter.com/sophannlay" },
+  { title: "Instagram", icon: "instagram.png", link: "https://www.instagram.com/laysophann/" },
+  { title: "Facebook", icon: "facebook.png", link: "https://www.facebook.com/sophann.lay.967" },
+  { title: "Telegram", icon: "telegram.png", link: "https://web.telegram.org/k/" },
+];
 
 function Contact() {
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto text-center font-mono">
         <h2 className="text-3xl font-bold text-white mb-6">Contact Me</h2>
-        <p className="text-lg text-gray-400 mb-10">
+        <p className="text-lg text-gray-400 mb-10 mx-3">
           Want to get in touch? Feel free to reach out to me via email or connect with me
           on social media. I'm always excited to collaborate on new projects and
           opportunities!
         </p>
-        <div>
-          <a
-            href="mailto:email@example.com"
-            className="inline-block bg-lime-500 text-white px-6 py-3 rounded-lg shadow-lg font-semibold text-lg transition duration-300 hover:bg-lime-600"
-          >
-            Email Me
-          </a>
-          <a
-            href="https://linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 inline-block text-lime-500 hover:text-lime-600 transition duration-300"
-          >
-            Connect on LinkedIn
-          </a>
-          {/* Add more social media links or contact methods as needed */}
+        <div className="flex flex-wrap justify-center items-center gap-x-4">
+          {skillsData.map(skill => (
+            <a
+              key={skill.title}
+              href={skill.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg p-1 cursor-pointer hover:bg-slate-800"
+            >
+              <img
+                src={`/icons/${skill.icon}`}
+                alt={`${skill.title} Icon`}
+                className="h-12"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </section>

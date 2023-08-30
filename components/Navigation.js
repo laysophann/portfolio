@@ -16,22 +16,22 @@ function Navigation() {
   }, []);
   return (
     <nav
-      className={`flex justify-between items-center py-4 px-10 ${
+      className={`flex justify-between items-center p-4 ${
         isNavFixed ? "fixed-nav" : ""
       }`}
     >
-      <h1 className="font-bold text-5xl text-lime-500">.SP.</h1>
+      <h1 className="font-bold text-5xl cursor-pointer bg-slate-800 rounded-lg border-x">.SP.</h1>
       <ul className="flex space-x-10 text-lg">
-        <li className="hover:text-lime-500">
+        <li className="hover:bg-slate-800 rounded-lg p-3">
           <a href="#about">About</a>
         </li>
-        <li className="hover:text-lime-500">
+        <li className="hover:bg-slate-800 rounded-lg p-3">
           <a href="#work">Work</a>
         </li>
-        <li className="hover:text-lime-500">
+        <li className="hover:bg-slate-800 rounded-lg p-3">
           <a href="#skills">Skills</a>
         </li>
-        <li className="hover:text-lime-500">
+        <li className="hover:bg-slate-800 rounded-lg p-3">
           <a href="#contact">Contact</a>
         </li>
       </ul>

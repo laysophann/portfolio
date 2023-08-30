@@ -4,7 +4,7 @@ const projects = [
   {
     title: 'Project 1',
     description: 'A description of Project 1',
-    image: '/images/react.png',
+    image: '/images/project1.png',
   },
   {
     title: 'Project 2',

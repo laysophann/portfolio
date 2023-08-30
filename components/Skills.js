@@ -18,8 +18,6 @@ const skillsData = [
   { title: "Notion", icon: "notion.png" },
   { title: "Jira", icon: "jira.png" },
   { title: "Figma", icon: "figma.png" },
-
-  // Add more skills here
 ];
 
 function Skills() {
