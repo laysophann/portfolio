@@ -4,7 +4,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
 import "react-vertical-timeline-component/style.min.css";
 
 const experiences = [
@@ -12,51 +11,46 @@ const experiences = [
     date: "2022 - Present",
     title: "Frontend Developer",
     company_name: "TechCo",
-    icon: "/icons/frontend-icon.png", // Replace with your icon path
+    icon: "/icons/frontend-icon.png",
     iconBg: "#1d1836",
     points: [
       "Developed and maintained responsive web applications using React.",
       "Collaborated with the design and backend teams to deliver high-quality user experiences.",
-      // Add more points
-    ],
-  },
-   {
-    date: "2022 - Present",
-    title: "Frontend Developer",
-    company_name: "TechCo",
-    icon: "/icons/frontend-icon.png", // Replace with your icon path
-    iconBg: "#1d1836",
-    points: [
-      "Developed and maintained responsive web applications using React.",
-      "Collaborated with the design and backend teams to deliver high-quality user experiences.",
-      // Add more points
     ],
   },
   {
     date: "2022 - Present",
     title: "Frontend Developer",
     company_name: "TechCo",
-    icon: "/icons/frontend-icon.png", // Replace with your icon path
+    icon: "/icons/frontend-icon.png",
     iconBg: "#1d1836",
     points: [
       "Developed and maintained responsive web applications using React.",
       "Collaborated with the design and backend teams to deliver high-quality user experiences.",
-      // Add more points
     ],
   },
   {
     date: "2022 - Present",
     title: "Frontend Developer",
     company_name: "TechCo",
-    icon: "/icons/frontend-icon.png", // Replace with your icon path
+    icon: "/icons/frontend-icon.png",
     iconBg: "#1d1836",
     points: [
       "Developed and maintained responsive web applications using React.",
       "Collaborated with the design and backend teams to deliver high-quality user experiences.",
-      // Add more points
     ],
   },
-  // Add more experience objects
+  {
+    date: "2022 - Present",
+    title: "Frontend Developer",
+    company_name: "TechCo",
+    icon: "/icons/frontend-icon.png",
+    iconBg: "#1d1836",
+    points: [
+      "Developed and maintained responsive web applications using React.",
+      "Collaborated with the design and backend teams to deliver high-quality user experiences.",
+    ],
+  },
 ];
 
 const Work = () => {
@@ -67,21 +61,17 @@ const Work = () => {
         animate="visible"
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
       >
-        <p className="text-white text-center text-lg mb-2">
-          What I have done so far
-        </p>
         <h2 className="text-white text-center text-2xl font-bold mb-8">
           Work Experience
         </h2>
       </motion.div>
-
-      <div className="mt-8 flex flex-col items-center">
+      <div className="mt-8 flex flex-col items-center font-mono">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <VerticalTimelineElement
               key={`experience-${index}`}
-              contentStyle={{ background: "#1d1836", color: "#fff" }}
-              contentArrowStyle={{ borderRight: "7px solid #232631" }}
+              contentStyle={{ background: "none", color: "#cbd5e0" }}
+              contentArrowStyle={{ borderRight: "7px solid #cbd5e0" }}
               date={experience.date}
               iconStyle={{ background: experience.iconBg }}
               icon={
@@ -95,7 +85,7 @@ const Work = () => {
               }
             >
               <div>
-                <h3 className="text-white font-bold text-xl mb-1">
+                <h3 className="font-bold text-xl mb-1">
                   {experience.title}
                 </h3>
                 <p
