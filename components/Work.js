@@ -1,38 +1,127 @@
-import React from 'react';
+import React from "react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import { motion } from "framer-motion";
 
-const projects = [
+import "react-vertical-timeline-component/style.min.css";
+
+const experiences = [
   {
-    title: 'Project 1',
-    description: 'A description of Project 1',
-    image: '/images/project1.png',
+    date: "2022 - Present",
+    title: "Frontend Developer",
+    company_name: "TechCo",
+    icon: "/icons/frontend-icon.png", // Replace with your icon path
+    iconBg: "#1d1836",
+    points: [
+      "Developed and maintained responsive web applications using React.",
+      "Collaborated with the design and backend teams to deliver high-quality user experiences.",
+      // Add more points
+    ],
+  },
+   {
+    date: "2022 - Present",
+    title: "Frontend Developer",
+    company_name: "TechCo",
+    icon: "/icons/frontend-icon.png", // Replace with your icon path
+    iconBg: "#1d1836",
+    points: [
+      "Developed and maintained responsive web applications using React.",
+      "Collaborated with the design and backend teams to deliver high-quality user experiences.",
+      // Add more points
+    ],
   },
   {
-    title: 'Project 2',
-    description: 'A description of Project 2',
-    image: '/images/project2.jpg',
+    date: "2022 - Present",
+    title: "Frontend Developer",
+    company_name: "TechCo",
+    icon: "/icons/frontend-icon.png", // Replace with your icon path
+    iconBg: "#1d1836",
+    points: [
+      "Developed and maintained responsive web applications using React.",
+      "Collaborated with the design and backend teams to deliver high-quality user experiences.",
+      // Add more points
+    ],
   },
-  // Add more projects here
+  {
+    date: "2022 - Present",
+    title: "Frontend Developer",
+    company_name: "TechCo",
+    icon: "/icons/frontend-icon.png", // Replace with your icon path
+    iconBg: "#1d1836",
+    points: [
+      "Developed and maintained responsive web applications using React.",
+      "Collaborated with the design and backend teams to deliver high-quality user experiences.",
+      // Add more points
+    ],
+  },
+  // Add more experience objects
 ];
 
-function Work() {
+const Work = () => {
   return (
-    <section id="work" className="py-20 font-mono">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">My Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className=" rounded-lg overflow-hidden shadow-lg">
-              <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400">{project.description}</p>
+    <section id="work" className="py-20">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+      >
+        <p className="text-white text-center text-lg mb-2">
+          What I have done so far
+        </p>
+        <h2 className="text-white text-center text-2xl font-bold mb-8">
+          Work Experience
+        </h2>
+      </motion.div>
+
+      <div className="mt-8 flex flex-col items-center">
+        <VerticalTimeline>
+          {experiences.map((experience, index) => (
+            <VerticalTimelineElement
+              key={`experience-${index}`}
+              contentStyle={{ background: "#1d1836", color: "#fff" }}
+              contentArrowStyle={{ borderRight: "7px solid #232631" }}
+              date={experience.date}
+              iconStyle={{ background: experience.iconBg }}
+              icon={
+                <div className="flex justify-center items-center w-full h-full">
+                  <img
+                    src={experience.icon}
+                    alt={experience.company_name}
+                    className="w-[60%] h-[60%] object-contain"
+                  />
+                </div>
+              }
+            >
+              <div>
+                <h3 className="text-white font-bold text-xl mb-1">
+                  {experience.title}
+                </h3>
+                <p
+                  className="text-secondary font-semibold"
+                  style={{ margin: 0 }}
+                >
+                  {experience.company_name}
+                </p>
               </div>
-            </div>
+
+              <ul className="mt-4 list-disc ml-6 space-y-2">
+                {experience.points.map((point, pointIndex) => (
+                  <li
+                    key={`experience-point-${pointIndex}`}
+                    className="text-white-100 text-sm pl-1 tracking-wider"
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </VerticalTimelineElement>
           ))}
-        </div>
+        </VerticalTimeline>
       </div>
     </section>
   );
-}
+};
 
 export default Work;
