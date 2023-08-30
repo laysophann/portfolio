@@ -26,6 +26,9 @@ function Navigation() {
           <a href="#about">About</a>
         </li>
         <li className="hover:text-lime-500">
+          <a href="#work">Work</a>
+        </li>
+        <li className="hover:text-lime-500">
           <a href="#skills">Skills</a>
         </li>
         <li className="hover:text-lime-500">
