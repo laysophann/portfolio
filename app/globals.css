@@ -12,3 +12,15 @@
   background-color: rgba(0, 0, 0, 0.8);
   /* Add other styles for the fixed navigation bar */
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-hover:hover {
+  animation: spin 1s linear infinite;
+}
