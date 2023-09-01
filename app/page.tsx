@@ -7,7 +7,7 @@ import About from "../components/About";
 import Work from "../components/Work";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
-import { BiSolidArrowToTop } from "react-icons/bi";
+import { IoArrowUpCircle } from "react-icons/io5";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -33,7 +33,7 @@ export default function Home() {
         className="text-gray-400 text-2xl md:text-3xl lg:text-4xl float-right mr-10 mb-10 animate-bounce cursor-pointer scroll-smooth"
         onClick={scrollToTop}
       >
-        <BiSolidArrowToTop />
+        <IoArrowUpCircle />
       </motion.div>
     </div>
   );
