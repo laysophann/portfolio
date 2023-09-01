@@ -23,7 +23,7 @@ function About() {
         <h1 className="text-white font-bold mb-2">Get to Know Me!</h1>
         <div className="flex text-gray-400 text-4xl justify-center items-center space-x-4 cursor-pointer">
           <a
-            href="https://drive.google.com/drive/u/0/search?q=type:pdf"
+            href="https://drive.google.com/file/d/1tFBvEj8vfiB4rU4Qqzgc08qeQyaF3w8b/view"
             target="_blank"
             rel="noopener noreferrer"
           >
