@@ -3,7 +3,7 @@ const experiences = [
       date: "2020-9-15 - 2020-10-01",
       title: "Frontend Developer",
       company_name: "Full Stack Bootcamp",
-      icon: "/icons/kitlogo.png",
+      icon: "/icons/telegram.png",
       iconBg: "#1d1836",
       points: [
         "Developed and maintained responsive web applications using Vue.Js",
