@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation";
 import About from "../components/About";
 import Work from "../components/Work";
 import Skills from "../components/Skills";
+import Project from "../components/Project";
 import Contact from "../components/Contact";
 import { IoArrowUpCircle } from "react-icons/io5";
 
@@ -25,6 +26,7 @@ export default function Home() {
       <About />
       <Work />
       <Skills />
+      <Project />
       <Contact />
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}

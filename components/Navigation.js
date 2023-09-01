@@ -15,7 +15,7 @@ function Navigation() {
   return (
     <nav className={`p-4 ${isNavOpen ? "fixed-nav" : ""}`}>
       <div className="flex justify-between items-center">
-        <h1 className="SP font-bold text-5xl cursor-pointer">.SP.</h1>
+        <h1 className="font-bold text-5xl cursor-pointer">|SP|</h1>
 
         {isDesktop ? (
           <ul
@@ -34,6 +34,11 @@ function Navigation() {
             <li className="hover:text-gray-400 rounded-lg p-3">
               <a href="#skills" onClick={toggleNav}>
                 Skills
+              </a>
+            </li>
+            <li className="hover:text-gray-400 rounded-lg p-3">
+              <a href="#projects" onClick={toggleNav}>
+                Projects
               </a>
             </li>
             <li className="hover:text-gray-400 rounded-lg p-3">
@@ -76,6 +81,11 @@ function Navigation() {
           <li className="hover:text-gray-400 rounded-lg p-3">
             <a href="#skills" onClick={toggleNav}>
               Skills
+            </a>
+          </li>
+          <li className="hover:text-gray-400 rounded-lg p-3">
+            <a href="#projects" onClick={toggleNav}>
+              Projects
             </a>
           </li>
           <li className="hover:text-gray-400 rounded-lg p-3">
