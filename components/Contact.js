@@ -1,37 +1,5 @@
 import React from "react";
-
-const skillsData = [
-  {
-    title: "Email",
-    icon: "email.png",
-    link: "https://mail.google.com/mail/u/1/#inbox",
-  },
-  {
-    title: "Linkedin",
-    icon: "linkedin.png",
-    link: "https://www.linkedin.com/in/lay-sophann-7750b8205/",
-  },
-  {
-    title: "Twitter",
-    icon: "twitter.png",
-    link: "https://twitter.com/sophannlay",
-  },
-  {
-    title: "Instagram",
-    icon: "instagram.png",
-    link: "https://www.instagram.com/laysophann/",
-  },
-  {
-    title: "Facebook",
-    icon: "facebook.png",
-    link: "https://www.facebook.com/sophann.lay.967",
-  },
-  {
-    title: "Telegram",
-    icon: "telegram.png",
-    link: "https://web.telegram.org/k/",
-  },
-];
+import contacts from "../utils/ContactData";
 
 function Contact() {
   return (
@@ -44,17 +12,17 @@ function Contact() {
           new projects and opportunities!
         </p>
         <div className="flex flex-wrap justify-center items-center gap-x-4">
-          {skillsData.map((skill) => (
+          {contacts.map((contact) => (
             <a
-              key={skill.title}
-              href={skill.link}
+              key={contact.title}
+              href={contact.link}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg p-1 cursor-pointer hover:bg-slate-800"
             >
               <img
-                src={`/icons/${skill.icon}`}
-                alt={`${skill.title} Icon`}
+                src={`/icons/${contact.icon}`}
+                alt={`${contact.title} Icon`}
                 className="h-12"
               />
             </a>
