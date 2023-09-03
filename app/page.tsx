@@ -9,6 +9,7 @@ import Skills from "../components/Skills";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
 import { IoArrowUpCircle } from "react-icons/io5";
+import Preloader from "../preloader/Preloader";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -17,6 +18,7 @@ const scrollToTop = () => {
 export default function Home() {
   return (
     <div>
+      <Preloader />
       <div className="fixed top-0 left-0 w-full h-full z-[-1]">
         <NightSkyBackground />
       </div>
