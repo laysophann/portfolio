@@ -9,7 +9,7 @@ function Preloader() {
     // Simulate loading by setting a timeout
     setTimeout(() => {
       setIsLoading(false);
-    }, 300); // Change the duration as needed
+    }, 1000); // Change the duration as needed
   }, []);
 
   return (
