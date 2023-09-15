@@ -1,16 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { animations, motion } from "framer-motion";
 import contacts from "../utils/ContactData";
+import useAnimations from "../utils/useAnimations";
 
 function Contact() {
+  const animations = useAnimations();
   return (
     <motion.section
       id="contact"
       className="py-20"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      {...animations.contactFadeUpAnimation}
     >
       <div className="container mx-auto text-center font-mono">
         <h2 className="text-3xl font-bold text-white mb-6">Connect Me</h2>
@@ -21,9 +20,7 @@ function Contact() {
         </p>
         <motion.div
           className="flex flex-wrap justify-center items-center gap-x-4"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+          {...animations.contacIconsAnimation}
         >
           {contacts.map((contact) => (
             <a
