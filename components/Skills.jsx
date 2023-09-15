@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../app/globals.css";
 import skills from "../utils/SkillsData";
-import useAnimations from "@/utils/useAnimations";
+import useAnimations from "../hooks/useAnimations";
 
 function Skills() {
   const animations = useAnimations();

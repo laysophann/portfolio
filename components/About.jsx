@@ -2,7 +2,7 @@ import React from "react";
 import { MdPictureAsPdf } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
-import useAnimations from "../utils/useAnimations";
+import useAnimations from "../hooks/useAnimations";
 import "../app/globals.css";
 
 function About() {

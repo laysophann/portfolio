@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import useMediaQuery from "../utils/useMedieQuery";
-import useNavLinks from "../utils/useNavLink";
+import useMediaQuery from "../hooks/useMedieQuery";
+import useNavLinks from "../hooks/useNavLink";
 
 function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);

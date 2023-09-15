@@ -1,7 +1,7 @@
 import React from "react";
 import { animations, motion } from "framer-motion";
 import contacts from "../utils/ContactData";
-import useAnimations from "../utils/useAnimations";
+import useAnimations from "../hooks/useAnimations";
 
 function Contact() {
   const animations = useAnimations();

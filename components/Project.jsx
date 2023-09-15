@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../app/globals.css";
 import projects from "../utils/ProjectData";
-import useAnimations from "@/utils/useAnimations";
+import useAnimations from "../hooks/useAnimations";
 
 function Project() {
   const animations = useAnimations();
