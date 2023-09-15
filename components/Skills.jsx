@@ -8,10 +8,10 @@ function Skills() {
     <motion.div
       id="skills"
       className="py-20 font-mono"
-      initial={{ opacity: 0 }} // Initial animation state
-      animate={{ opacity: 1 }} // Animation when component is present
-      exit={{ opacity: 0 }} // Animation when component is removed
-      transition={{ duration: 0.1 }} // Animation duration
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.1 }}
     >
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold text-white mb-6">Skills</h2>

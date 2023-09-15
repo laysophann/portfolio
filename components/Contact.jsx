@@ -7,10 +7,10 @@ function Contact() {
     <motion.section
       id="contact"
       className="py-20"
-      initial={{ opacity: 0, y: 20 }} // Initial animation state
-      animate={{ opacity: 1, y: 0 }} // Animation when component is present
-      exit={{ opacity: 0, y: 20 }} // Animation when component is removed
-      transition={{ duration: 0.5, ease: "easeOut" }} // Animation duration and easing
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="container mx-auto text-center font-mono">
         <h2 className="text-3xl font-bold text-white mb-6">Connect Me</h2>
@@ -21,9 +21,9 @@ function Contact() {
         </p>
         <motion.div
           className="flex flex-wrap justify-center items-center gap-x-4"
-          initial={{ opacity: 0, scale: 0.8 }} // Initial animation state
-          animate={{ opacity: 1, scale: 1 }} // Animation when component is present
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }} // Animation duration and easing with a slight delay
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
         >
           {contacts.map((contact) => (
             <a
@@ -37,8 +37,8 @@ function Contact() {
                 src={`/icons/${contact.icon}`}
                 alt={`${contact.title} Icon`}
                 className="h-12"
-                whileHover={{ scale: 1.1 }} // Scale effect on hover
-                whileTap={{ scale: 0.9 }} // Scale effect on tap
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               />
             </a>
           ))}

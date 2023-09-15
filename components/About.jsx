@@ -2,24 +2,23 @@ import React from "react";
 import { MdPictureAsPdf } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
+import useAnimations from "../utils/useAnimations";
 import "../app/globals.css";
 
 function About() {
+  const animations = useAnimations();
+
   return (
     <section id="about" className="py-20 font-mono">
       <div className="container mx-auto text-center p-4">
         <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          {...animations.fadeUpAnimation}
           className="text-3xl font-bold text-white mb-6"
         >
           About Me()
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          {...animations.delayedFadeUpAnimation}
           className="text-lg text-gray-400 mb-10"
         >
           Hi there! I am Lay Sophann, a passionate frontend developer with a
@@ -29,9 +28,7 @@ function About() {
           to become a full-stack developer.
         </motion.p>
         <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          {...animations.delayedLongerFadeUpAnimation}
           className="text-lg text-gray-400 mb-10"
         >
           When I am not coding, you can find me watching anime or playing
@@ -45,24 +42,20 @@ function About() {
           or connect with me on social media!
         </motion.p>
         <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          {...animations.delayedLongerFadeUpAnimation}
           className="text-white font-bold mb-2"
         >
           Get to Know Me!
         </motion.h1>
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          {...animations.delayedLongerFadeUpAnimation}
           className="flex text-gray-400 text-4xl justify-center items-center space-x-4 cursor-pointer"
         >
           <motion.a
             href="https://drive.google.com/file/d/1tFBvEj8vfiB4rU4Qqzgc08qeQyaF3w8b/view"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            {...animations.scaleHoverAnimation}
           >
             <MdPictureAsPdf className="animate-spin-hover" />
           </motion.a>
@@ -70,7 +63,7 @@ function About() {
             href="https://github.com/laysophann/"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            {...animations.scaleHoverAnimation}
           >
             <AiFillGithub className="animate-spin-hover" />
           </motion.a>

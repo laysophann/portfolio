@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import experiences from "../utils/ExperienceData";
 
-
 const Work = () => {
   return (
     <section id="work" className="py-20">
@@ -40,9 +39,7 @@ const Work = () => {
               }
             >
               <div>
-                <h3 className="font-bold text-xl mb-1">
-                  {experience.title}
-                </h3>
+                <h3 className="font-bold text-xl mb-1">{experience.title}</h3>
                 <p
                   className="text-secondary font-semibold"
                   style={{ margin: 0 }}

@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import NightSkyBackground from "../components/NightSkyBackground";
-import Navigation from "../components/Navigation";
-import About from "../components/About";
-import Work from "../components/Work";
-import Skills from "../components/Skills";
-import Project from "../components/Project";
-import Contact from "../components/Contact";
+import NightSkyBackground from "../components/NightSkyBackground.jsx";
+import Navigation from "../components/Navigation.jsx";
+import About from "../components/About.jsx";
+import Work from "../components/Work.jsx";
+import Skills from "../components/Skills.jsx";
+import Project from "../components/Project.jsx";
+import Contact from "../components/Contact.jsx";
 import { IoArrowUpCircle } from "react-icons/io5";
 import Preloader from "../preloader/Preloader";
 

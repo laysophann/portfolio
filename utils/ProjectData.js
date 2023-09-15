@@ -1,25 +1,39 @@
 const projects = [
   {
-    title: "Project 1",
-    description: "This is the description of Project 1.",
-    image: "/images/sp.png",
+    title: "PolliFy - Polling App",
+    description:
+      "This is the bootcamp project aims to develop a fullstack website that enable user to do voting for their favorite foods among KITians and staffs.",
+    image: "/projects_images/pollify.png",
   },
   {
-    title: "Project 2",
-    description: "This is the description of Project 2.",
-    image: "/images/sp.png",
+    title: "PolliFy - Polling App",
+    description:
+      "This is the bootcamp project aims to develop a fullstack website that enable user to do voting for their favorite foods among KITians and staffs.",
+    image: "/projects_images/pollify.png",
   },
   {
-    title: "Project 1",
-    description: "This is the description of Project 1.",
-    image: "/images/sp.png",
+    title: "PolliFy - Polling App",
+    description:
+      "This is the bootcamp project aims to develop a fullstack website that enable user to do voting for their favorite foods among KITians and staffs.",
+    image: "/projects_images/pollify.png",
   },
   {
-    title: "Project 2",
-    description: "This is the description of Project 2.",
-    image: "/images/sp.png",
+    title: "PolliFy - Polling App",
+    description:
+      "This is the bootcamp project aims to develop a fullstack website that enable user to do voting for their favorite foods among KITians and staffs.",
+    image: "/projects_images/pollify.png",
   },
-  // Add more projects here
+  {
+    title: "PolliFy - Polling App",
+    description:
+      "This is the bootcamp project aims to develop a fullstack website that enable user to do voting for their favorite foods among KITians and staffs.",
+    image: "/projects_images/pollify.png",
+  },
+  {
+    title: "PolliFy - Polling App",
+    description:
+      "This is the bootcamp project aims to develop a fullstack website that enable user to do voting for their favorite foods among KITians and staffs.",
+    image: "/projects_images/pollify.png",
+  },
 ];
-
 export default projects;

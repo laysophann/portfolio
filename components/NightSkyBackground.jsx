@@ -4,7 +4,7 @@ import * as THREE from "three";
 function NightSkyBackground() {
   const sceneRef = useRef(null);
   const animationFrameIDRef = useRef(null);
-  const scene = useRef(null); // Maintain a reference to the scene
+  const scene = useRef(null);
 
   useEffect(() => {
     scene.current = new THREE.Scene();
@@ -50,7 +50,6 @@ function NightSkyBackground() {
     };
 
     const animate = () => {
-      // Update rotation values here
       scene.current.rotation.x += 0.001;
       scene.current.rotation.y += 0.001;
 
