@@ -12,7 +12,7 @@ function Project() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="p-4 rounded-lg border border-gray-800 hover:border-white"
+              className="p-4 rounded-lg border border-gray-800 hover:border-white mx-auto max-w-sm"
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -22,8 +22,7 @@ function Project() {
               <motion.img
                 src={project.image}
                 alt={project.title}
-                className="mx-auto h-48 mb-4"
-                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                className="mx-auto h-48 mb-4 rounded-md"
               />
               <h3 className="text-lg font-semibold text-white mb-2">
                 {project.title}
