@@ -11,7 +11,10 @@ function Contact() {
       className="py-20"
       {...animations.contactFadeUpAnimation}
     >
-      <div className="container mx-auto text-center font-mono">
+      <div
+        className="container mx-auto text-center font-mono"
+        style={{ maxWidth: "960px" }}
+      >
         <h2 className="text-3xl font-bold text-white mb-6">Connect Me</h2>
         <p className="text-lg text-gray-400 mb-10 mx-3">
           Want to get in touch? Feel free to reach out to me via email or

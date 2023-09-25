@@ -5,6 +5,7 @@ import useNavLinks from "../hooks/useNavLink";
 
 function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -15,9 +16,10 @@ function Navigation() {
 
   return (
     <nav
-      className={`p-4 ${isMobile && isNavOpen ? "fixed-nav" : ""} ${
+      className={`p-4 mx-auto ${isMobile && isNavOpen ? "fixed-nav" : ""} ${
         isDesktop ? "fixed-nav" : ""
       }`}
+      style={{ maxWidth: "1400px" }}
     >
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-5xl cursor-pointer">|SP|</h1>

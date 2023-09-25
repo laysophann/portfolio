@@ -10,7 +10,10 @@ function About() {
 
   return (
     <section id="about" className="py-20 font-mono">
-      <div className="container mx-auto text-center p-4">
+      <div
+        className="container mx-auto text-center p-4"
+        style={{ maxWidth: "960px" }}
+      >
         <motion.h2
           {...animations.fadeUpAnimation}
           className="text-3xl font-bold text-white mb-6"
