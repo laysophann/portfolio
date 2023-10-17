@@ -1,6 +1,7 @@
 import React from "react";
 import { MdPictureAsPdf } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
+import { FaBehanceSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
 import useAnimations from "../hooks/useAnimations";
 import "../app/globals.css";
@@ -55,7 +56,7 @@ function About() {
           className="flex text-gray-400 text-4xl justify-center items-center space-x-4 cursor-pointer"
         >
           <motion.a
-            href="https://drive.google.com/file/d/1tFBvEj8vfiB4rU4Qqzgc08qeQyaF3w8b/view"
+            href="https://drive.google.com/file/d/1L87IlErUjK5GC20qmxfaZpAYbe2CB1oU/view"
             target="_blank"
             rel="noopener noreferrer"
             {...animations.scaleHoverAnimation}
@@ -69,6 +70,14 @@ function About() {
             {...animations.scaleHoverAnimation}
           >
             <AiFillGithub className="animate-spin-hover" />
+          </motion.a>
+          <motion.a
+            href="https://www.behance.net/sophannlay"
+            target="_blank"
+            rel="noopener noreferrer"
+            {...animations.scaleHoverAnimation}
+          >
+            <FaBehanceSquare className="animate-spin-hover" />
           </motion.a>
         </motion.div>
       </div>
