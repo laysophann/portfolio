@@ -62,10 +62,55 @@ const projects = [
     role: "Frontend Developer",
     technologies: ["React", "Tailwind CSS"],
     description:
-      "A Todo app built with React that allows users to create, edit, and delete tasks.",
+      "A dashboard for admin to have full control for their partners that are the retail stores or supermarket.",
     image: "/projects_images/admin.png",
     githubUrl: "https://github.com/laysophann/Admin-Dashboard-Frontend",
     liveUrl: "https://admin-dashboard-frontend-nu.vercel.app/",
+  },
+  {
+    title: "The Wild OASIS",
+    role: "Fullstack Developer",
+    technologies: ["React", "Styled Components", "Supabase"],
+    description:
+      "A fully functionalities dashboard for hotel management operation.",
+    image: "/projects_images/the-wild.png",
+    githubUrl: "https://github.com/laysophann/the-wild-oasis",
+  },
+  {
+    title: "InnovativeService",
+    role: "Frontend Developer",
+    technologies: ["React", "Tailwind CSS"],
+    description:
+      "An innovative platform landing page designed to connect freelancer with their target customers or clients.",
+    image: "/projects_images/innovativeservice.png",
+    githubUrl: "https://github.com/laysophann/innovateserve",
+    liveUrl: "https://innovateserve.vercel.app/",
+  },
+  {
+    title: "Mern Stack Workout project",
+    role: "Fullstack Developer",
+    technologies: ["MongoDB", "Express", "React", "Node"],
+    description:
+      "A comprehensive full-stack web application showcasing the integration of MongoDB, Express, React, and Node.js. The project includes features such as user authentication, a dynamic front-end interface, RESTful API endpoints, and a secure backend connected to a NoSQL database.",
+    image: "/projects_images/mern.png",
+    githubUrl: "https://github.com/laysophann/mern-stack",
+  },
+  {
+    title: "Job Finder App",
+    role: "Mobile App Developer",
+    technologies: ["React Native", "Expo"],
+    description:
+      "A mobile application built with React Native integrated with API service that allows users to search and apply for jobs. Features include job search filters, detailed job listings.",
+    image: "/projects_images/job-finder.jpg",
+    githubUrl: "https://github.com/laysophann/react-native-job-finder",
+  },
+  {
+    title: "Car module",
+    role: "Odoo Developer",
+    technologies: ["Odoo Framework", "Python", "XML", "PostgreSQL"],
+    description:
+      "A Odoo module designed to manage car-related operations within a company. The module includes features like car parking, car status, and update car power. ",
+    image: "/projects_images/car.png",
   },
 ];
 
