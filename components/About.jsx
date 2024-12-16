@@ -56,7 +56,7 @@ function About() {
           className="flex text-gray-400 text-4xl justify-center items-center space-x-4 cursor-pointer"
         >
           <motion.a
-            href="https://drive.google.com/file/d/1L87IlErUjK5GC20qmxfaZpAYbe2CB1oU/view"
+            href="https://drive.google.com/file/d/1tGmWTK8lXa5f__o2AhEMxJTowgiHPkeM/view"
             target="_blank"
             rel="noopener noreferrer"
             {...animations.scaleHoverAnimation}

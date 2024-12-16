@@ -23,7 +23,7 @@ function NightSkyBackground() {
     const starsGeometry = new THREE.BufferGeometry();
     const starsMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
-      size: 0.02,
+      size: 4,
     });
     const starsVertices = [];
 

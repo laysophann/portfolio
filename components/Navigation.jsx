@@ -21,9 +21,7 @@ function Navigation() {
       }`}
       style={{ maxWidth: "1400px" }}
     >
-      <div className="flex justify-between items-center">
-        <h1 className="font-bold text-5xl cursor-pointer">|SP|</h1>
-
+      <div className="flex justify-center items-center">
         {isMobile ? (
           isNavOpen ? (
             <FaTimes

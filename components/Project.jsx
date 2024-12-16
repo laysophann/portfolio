@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import "../app/globals.css";
 import projects from "../utils/ProjectData";
 import useAnimations from "../hooks/useAnimations";
+import { AiFillGithub } from "react-icons/ai";
 
 function Project() {
   const animations = useAnimations();
@@ -29,6 +30,7 @@ function Project() {
                 {project.title}
               </h3>
               <p className="text-gray-400">{project.description}</p>
+              <img src={project.icon} />
             </motion.div>
           ))}
         </div>

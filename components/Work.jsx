@@ -16,7 +16,7 @@ const Work = () => {
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
       >
         <h2 className="text-white text-center text-2xl font-bold mb-8">
-          Work Experience
+          Work Experiences
         </h2>
       </motion.div>
       <div className="mt-8 flex flex-col items-center font-mono">
