@@ -1,10 +1,9 @@
 import React from "react";
-import { MdPictureAsPdf } from "react-icons/md";
-import { AiFillGithub } from "react-icons/ai";
-import { FaBehanceSquare } from "react-icons/fa";
-import { motion } from "framer-motion";
-import useAnimations from "../hooks/useAnimations";
 import "../app/globals.css";
+import { motion } from "framer-motion";
+
+import useAnimations from "../hooks/useAnimations";
+import socialLinks from "../utils/AboutData";
 
 function About() {
   const animations = useAnimations();
@@ -19,7 +18,7 @@ function About() {
           {...animations.fadeUpAnimation}
           className="text-3xl font-bold text-white mb-6"
         >
-          About Me()
+          About Me
         </motion.h2>
         <motion.p
           {...animations.delayedFadeUpAnimation}
@@ -28,15 +27,13 @@ function About() {
           Hi there! I am Lay Sophann, a passionate frontend developer with a
           love for creating beautiful websites. With 2 years of experience in
           the field, I have worked on a variety of projects that showcase my
-          skills in HTML, CSS, JavaScript, React, Next, Typescript. My goal is
-          to become a full-stack developer.
+          skills in HTML, CSS, JavaScript, React, Next, and TypeScript.
         </motion.p>
         <motion.p
           {...animations.delayedLongerFadeUpAnimation}
           className="text-lg text-gray-400 mb-10"
         >
-          When I am not coding, you can find me watching anime or playing
-          football and volleyball. Feel free to reach out to me at{" "}
+          Feel free to reach out to me at{" "}
           <a
             href="https://mail.google.com/mail/u/1/#inbox"
             className="text-lime-500 hover:text-lime-600"
@@ -55,30 +52,17 @@ function About() {
           {...animations.delayedLongerFadeUpAnimation}
           className="flex text-gray-400 text-4xl justify-center items-center space-x-4 cursor-pointer"
         >
-          <motion.a
-            href="https://drive.google.com/file/d/1tGmWTK8lXa5f__o2AhEMxJTowgiHPkeM/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            {...animations.scaleHoverAnimation}
-          >
-            <MdPictureAsPdf className="animate-spin-hover" />
-          </motion.a>
-          <motion.a
-            href="https://github.com/laysophann/"
-            target="_blank"
-            rel="noopener noreferrer"
-            {...animations.scaleHoverAnimation}
-          >
-            <AiFillGithub className="animate-spin-hover" />
-          </motion.a>
-          <motion.a
-            href="https://www.behance.net/sophannlay"
-            target="_blank"
-            rel="noopener noreferrer"
-            {...animations.scaleHoverAnimation}
-          >
-            <FaBehanceSquare className="animate-spin-hover" />
-          </motion.a>
+          {socialLinks.map((link, index) => (
+            <motion.a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              {...animations.scaleHoverAnimation}
+            >
+              {link.icon}
+            </motion.a>
+          ))}
         </motion.div>
       </div>
     </section>
