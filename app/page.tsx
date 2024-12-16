@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+
 import NightSkyBackground from "../components/NightSkyBackground.jsx";
 import Navigation from "../components/Navigation.jsx";
 import About from "../components/About.jsx";
