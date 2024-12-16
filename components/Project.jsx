@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { AiFillGithub } from "react-icons/ai";
+import { CiLink } from "react-icons/ci";
 import "../app/globals.css";
+
 import projects from "../utils/ProjectData";
 import useAnimations from "../hooks/useAnimations";
-import { AiFillGithub } from "react-icons/ai";
 
 function Project() {
   const animations = useAnimations();
@@ -29,8 +31,35 @@ function Project() {
               <h3 className="text-lg font-semibold text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-400">{project.description}</p>
-              <img src={project.icon} />
+              <p className="text-gray-400 mb-2">
+                <strong>Role:</strong> {project.role}
+              </p>
+              <p className="text-gray-400 mb-2">
+                <strong>Technologies:</strong> {project.technologies.join(", ")}
+              </p>
+              <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="flex justify-center items-center space-x-4 mt-4">
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white text-2xl"
+                  >
+                    <AiFillGithub />
+                  </a>
+                )}
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white text-2xl"
+                  >
+                    <CiLink />
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
