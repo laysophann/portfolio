@@ -112,6 +112,16 @@ const projects = [
       "A Odoo module designed to manage car-related operations within a company. The module includes features like car parking, car status, and update car power. ",
     image: "/projects_images/car.png",
   },
+  {
+    title: "100-Days-of-Code-The-Complete-Python-Pro-Bootcamp",
+    role: "Python Developer",
+    technologies: ["Python"],
+    description:
+      "A bootcamp to enhances skill development in python from beginner to advance.",
+    image: "/projects_images/100days-python.jpg",
+    githubUrl:
+      "https://github.com/laysophann/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp",
+  },
 ];
 
 export default projects;
