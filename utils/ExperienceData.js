@@ -1,6 +1,6 @@
 const experiences = [
   {
-    date: "2024-02  -  2024-11",
+    date: "2024-02  -  Present",
     title: "Odoo developer and Operation supporter",
     company_name: "KIT",
     icon: "/icons/kit.png",
